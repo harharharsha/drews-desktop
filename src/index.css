@@ -8,10 +8,6 @@ body,
   min-height: 100%;
 }
 
-body {
-  background: black;
-}
-
 .terminal-font,
 .terminal-font * {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
