@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./index.css";
 
-const PASSWORD = "hi";
+const PASSWORD = "harshaissupercool";
 
 function App() {
   const [screen, setScreen] = useState("terminal");
@@ -449,13 +449,19 @@ const [showFinalMessagePopup, setShowFinalMessagePopup] = useState(false);
 }
 
 function confirmShutdown() {
-  playSound("shutdown.mp3", 0.7);
+  
 
   setShutdownStep("shutting");
 
   setTimeout(() => {
     setIsBlackScreen(true);
   }, 5000);
+
+  setTimeout(() => {
+    playSound("shutdown.mp3", .7);
+  }, 5000);
+
+  
 }
 
   function playTrashSound() {
@@ -3172,8 +3178,8 @@ function CauldronWindow({ onClose, onFinished, onLetterFixed }) {
 
   function downloadLetter() {
     const link = document.createElement("a");
-    link.href = `${import.meta.env.BASE_URL}letter.png`;
-    link.download = "letter.png";
+    link.href = `${import.meta.env.BASE_URL}letter.jpg`;
+    link.download = "letter.jpg";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -3291,7 +3297,7 @@ function CauldronWindow({ onClose, onFinished, onLetterFixed }) {
               draggable="false"
             />
 
-            <p className="text-lg">would you like to download letter.png?</p>
+            <p className="text-lg">would you like to download letter.jpg?</p>
 
             <div className="mt-5 flex justify-center gap-3">
               <button
