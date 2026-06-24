@@ -3178,8 +3178,8 @@ function CauldronWindow({ onClose, onFinished, onLetterFixed }) {
 
   function downloadLetter() {
     const link = document.createElement("a");
-    link.href = `${import.meta.env.BASE_URL}letter.jpg`;
-    link.download = "letter.jpg";
+    link.href = `${import.meta.env.BASE_URL}txt_file_icon.png`;
+    link.download = "txt_file_icon.png";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -3297,7 +3297,7 @@ function CauldronWindow({ onClose, onFinished, onLetterFixed }) {
               draggable="false"
             />
 
-            <p className="text-lg">would you like to download letter.jpg?</p>
+            <p className="text-lg">would you like to download letter.png?</p>
 
             <div className="mt-5 flex justify-center gap-3">
               <button
